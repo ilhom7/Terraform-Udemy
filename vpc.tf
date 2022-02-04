@@ -1,0 +1,44 @@
+# resource "aws_vpc" "my_vpc" {
+#   cidr_block = "172.16.0.0/16"
+
+#   tags = {
+#     Name = "ilhom_development"
+#   }
+# }
+
+# resource "aws_subnet" "my_subnet_1" {
+#   vpc_id            = aws_vpc.my_vpc.id
+#   cidr_block        = "172.16.10.0/24"
+#   availability_zone = "us-east-1a"
+
+#   tags = {
+#     Name = "tf-example"
+#   }
+# }
+
+# resource "aws_subnet" "my_subnet_2" {
+#   vpc_id            = aws_vpc.my_vpc.id
+#   cidr_block        = "172.16.20.0/24"
+#   availability_zone = "us-east-1b"
+
+#   tags = {
+#     Name = "tf-example"
+#   }
+# }
+# resource "aws_network_interface" "super_ziyotek" {
+#   subnet_id = aws_subnet.my_subnet_1.id
+#   #   private_ips = ["172.16.10.100"]
+
+#   tags = {
+#     Name = "primary_network_interface"
+#   }
+# }
+
+# resource "aws_network_interface" "super_ziyotek2" {
+#   subnet_id = aws_subnet.my_subnet_2.id
+#   #   private_ips = ["172.16.10.100"]
+
+#   tags = {
+#     Name = "primary_network_interface2"
+#   }
+# }
